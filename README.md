@@ -50,7 +50,7 @@ Search the code for `TODO` to find each one.
 - **Email:** `hello@gradermedia.com.au` is a placeholder in the mailto links and JSON-LD.
 - **Domain:** canonical, Open Graph URLs, `robots.txt` and `sitemap.xml` assume `https://www.gradermedia.com.au`.
 - **Logos:** the client strip is text; swap in monochrome logo files (with permission).
-- **Hero video:** `assets/video/hero-loop.webm` / `.mp4` (7.4 s muted loop) with `assets/img/hero-poster.webp` / `.jpg`. Reduced-motion visitors see the poster only. Swap for a full showreel loop when one is cut.
+- **Hero video:** `assets/video/hero-loop.webm` / `.mp4` (13.4 s muted loop, 1600×900, no audio) with `assets/img/hero-poster.webp` / `.jpg` (the reel's first frame). The loop is seven hard-cut snippets from different jobs (playground aerial, industrial training, junior football, early learning, commercial property, client function, school sport) with a light shared grade and no on-screen text. Reduced-motion visitors see the poster only.
 - **Featured work images:** real stills in `assets/img/work/` (WebP + JPG fallback). Confirm each client is happy to be shown, and link cards to case studies once written. The two `grid-*` cards are agency work via The Grid: keep end clients unnamed and only use frames with no end-client logos, badges or signage. The grid is 4 columns on desktop, 2 on tablet and 1 on mobile, so keep the card count a multiple of 4 (or 2 at minimum).
 - **Logo:** done (split G, Archivo Expanded ExtraBold outlined to paths).
 - **OG image (optional):** `assets/img/og-home.png` is a logo card; a frame from real work would do better.
