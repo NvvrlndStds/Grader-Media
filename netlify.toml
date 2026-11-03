@@ -1,0 +1,24 @@
+# Grader Media: Netlify config. Plain static site, no build step.
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# TODO: once the domain is live, uncomment to force the www version
+# [[redirects]]
+#   from = "https://gradermedia.com.au/*"
+#   to = "https://www.gradermedia.com.au/:splat"
+#   status = 301
+#   force = true

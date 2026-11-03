@@ -1,0 +1,16 @@
+# macOS / Windows
+.DS_Store
+**/.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencies (this site has no build step)
+node_modules/
+
+# Netlify CLI local state
+.netlify/
+
+# Local environment
+.env
+.env.*
+*.log
