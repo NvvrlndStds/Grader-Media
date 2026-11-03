@@ -114,18 +114,40 @@
   <section class="clients" aria-labelledby="clients-title">
     <div class="wrap">
       <h2 id="clients-title" class="clients-title">Selected clients</h2>
-      <!-- TODO: swap these text names for SVG/PNG logo files (monochrome, light on dark) once permission and files are supplied.
-           Keep alt text = organisation name. -->
-      <ul class="logo-strip">
-        <li>UWA</li>
-        <li>AWB Co.</li>
-        <li>Premier People</li>
-        <li>PlayPro</li>
-        <li>WCA Solutions</li>
-        <li>Stirling Saints</li>
-        <li>Harness Digital</li>
-        <li>The Grid</li>
-      </ul>
+    </div>
+    <!-- Logo marquee: the second list is a visual duplicate for a seamless loop, hidden from assistive tech.
+         Pauses on hover/focus; shows a static wrapped row under prefers-reduced-motion. -->
+    <div class="marquee" tabindex="0" role="group" aria-label="Client logos (scrolling, pauses on hover or focus)">
+      <div class="marquee-track">
+        <ul class="logo-strip">
+            <li><img src="assets/img/clients/uwa.svg" alt="The University of Western Australia" width="120" height="40" decoding="async"></li>
+            <li><img src="assets/img/clients/awb-co.svg" alt="AWB Co." width="88" height="36" decoding="async"></li>
+            <li><img src="assets/img/clients/premier-people.png" alt="Premier People" width="50" height="44" decoding="async"></li>
+            <li><img src="assets/img/clients/playpro.png" alt="PlayPro" width="131" height="30" decoding="async"></li>
+            <li><img src="assets/img/clients/wca-solutions.png" alt="WCA Solutions" width="82" height="40" decoding="async"></li>
+            <li><img src="assets/img/clients/stirling-saints.png" alt="Stirling Saints Junior Football Club" width="152" height="32" decoding="async"></li>
+            <li><img src="assets/img/clients/harness-digital.png" alt="Harness Digital" width="119" height="30" decoding="async"></li>
+            <li class="logo-text">The Grid</li>
+            <li><img src="assets/img/clients/queensgate-medical-centre.png" alt="Queensgate Medical Centre" width="159" height="28" decoding="async"></li>
+            <li><img src="assets/img/clients/bloom.png" alt="Bloom Early Education" width="70" height="44" decoding="async"></li>
+            <li><img src="assets/img/clients/nj-construction.png" alt="NJ Construction" width="76" height="40" decoding="async"></li>
+            <li><img src="assets/img/clients/kiddo.svg" alt="KIDDO" width="85" height="42" decoding="async"></li>
+        </ul>
+        <ul class="logo-strip" aria-hidden="true">
+            <li><img src="assets/img/clients/uwa.svg" alt="" width="120" height="40" decoding="async"></li>
+            <li><img src="assets/img/clients/awb-co.svg" alt="" width="88" height="36" decoding="async"></li>
+            <li><img src="assets/img/clients/premier-people.png" alt="" width="50" height="44" decoding="async"></li>
+            <li><img src="assets/img/clients/playpro.png" alt="" width="131" height="30" decoding="async"></li>
+            <li><img src="assets/img/clients/wca-solutions.png" alt="" width="82" height="40" decoding="async"></li>
+            <li><img src="assets/img/clients/stirling-saints.png" alt="" width="152" height="32" decoding="async"></li>
+            <li><img src="assets/img/clients/harness-digital.png" alt="" width="119" height="30" decoding="async"></li>
+            <li class="logo-text">The Grid</li>
+            <li><img src="assets/img/clients/queensgate-medical-centre.png" alt="" width="159" height="28" decoding="async"></li>
+            <li><img src="assets/img/clients/bloom.png" alt="" width="70" height="44" decoding="async"></li>
+            <li><img src="assets/img/clients/nj-construction.png" alt="" width="76" height="40" decoding="async"></li>
+            <li><img src="assets/img/clients/kiddo.svg" alt="" width="85" height="42" decoding="async"></li>
+        </ul>
+      </div>
     </div>
   </section>
 
