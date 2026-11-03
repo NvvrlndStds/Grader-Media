@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=20261103b">
+<link rel="stylesheet" href="assets/css/styles.css?v=20261103c">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -53,7 +53,7 @@
   "logo": "https://www.gradermedia.com.au/assets/img/gm-mark.svg"
 }
 </script>
-<!-- TODO: in the JSON-LD above, confirm email; add "streetAddress" (Nevverland Studios, Landsdale) if you want the full address listed; add "telephone" and "sameAs" (social URLs) once known -->
+<!-- TODO: in the JSON-LD above, add "streetAddress" (Nevverland Studios, Landsdale) if you want the full address listed; add "telephone" and "sameAs" (social URLs) once known -->
 </head>
 <body>
 
@@ -410,8 +410,78 @@
         </ul>
       </div>
       <div class="contact-card">
-        <!-- TODO: hello@gradermedia.com.au is a PLACEHOLDER. Not yet confirmed. Replace in every mailto on this page (search "hello@gradermedia.com.au"), plus the JSON-LD in <head>. -->
-        <a class="btn btn-large" href="mailto:hello@gradermedia.com.au?subject=Project%20enquiry%20-%20Grader%20Media">Get a quote</a>
+        <form class="quote-form" id="quote-form" name="quote" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="quote-form-title">
+          <h3 id="quote-form-title" class="quote-form-title">Request a quote</h3>
+          <input type="hidden" name="form-name" value="quote">
+          <p class="visually-hidden" aria-hidden="true">
+            <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+          <p class="form-hint">Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="qf-name">Name <span class="req" aria-hidden="true">*</span></label>
+              <input id="qf-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="qf-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="qf-email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" required>
+            </div>
+            <div class="field">
+              <label for="qf-phone">Phone <span class="opt">(optional)</span></label>
+              <input id="qf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+            </div>
+            <div class="field">
+              <label for="qf-company">Company or organisation <span class="opt">(optional)</span></label>
+              <input id="qf-company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="qf-type">Project type <span class="req" aria-hidden="true">*</span></label>
+              <select id="qf-type" name="project-type" required>
+                <option value="" selected disabled>Choose one</option>
+                <option>Corporate video</option>
+                <option>Event coverage</option>
+                <option>Staff headshots/photography</option>
+                <option>Monthly content</option>
+                <option>Podcast (Nevverland Studios)</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="qf-budget">Rough budget <span class="opt">(optional)</span></label>
+              <select id="qf-budget" name="budget">
+                <option value="" selected>Not sure yet</option>
+                <option>Under $2,000</option>
+                <option>$2,000 to $5,000</option>
+                <option>$5,000 to $10,000</option>
+                <option>$10,000 to $20,000</option>
+                <option>Over $20,000</option>
+              </select>
+            </div>
+            <div class="field field-full">
+              <label for="qf-timeframe">Preferred date or timeframe <span class="opt">(optional)</span></label>
+              <input id="qf-timeframe" name="timeframe" type="text" autocomplete="off" aria-describedby="qf-timeframe-hint">
+              <p class="field-hint" id="qf-timeframe-hint">For example, a shoot date, an event date or a deadline.</p>
+            </div>
+            <div class="field field-full">
+              <label for="qf-message">About the project <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="qf-message" name="message" rows="5" required aria-describedby="qf-message-hint"></textarea>
+              <p class="field-hint" id="qf-message-hint">What you need made, where it would be shot, and anything else that helps.</p>
+            </div>
+          </div>
+
+          <div class="form-error" id="quote-form-error" role="alert" hidden>
+            <p><strong>Sorry, your enquiry didn't send.</strong> Please try again, or email us directly at <a href="mailto:hello@gradermedia.com.au?subject=Project%20enquiry%20-%20Grader%20Media">hello@gradermedia.com.au</a>.</p>
+          </div>
+
+          <button class="btn btn-large" type="submit">Send enquiry</button>
+        </form>
+
+        <div class="form-success" id="quote-form-success" role="status" tabindex="-1" hidden>
+          <p class="eyebrow">Enquiry sent</p>
+          <h3 class="quote-form-title">Thanks, we'll be in touch within one business day.</h3>
+        </div>
+
         <p class="contact-email">or email <a href="mailto:hello@gradermedia.com.au">hello@gradermedia.com.au</a></p>
         <!-- TODO: add phone number (tel: link) and/or a Calendly intro-call link if wanted -->
         <p class="contact-note">Grader Media runs and operates out of <a href="https://nevverlandstudios.com" rel="noopener">Nevverland Studios</a>, Landsdale WA. We shoot on location across Perth.</p>
@@ -461,6 +531,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261103b" defer></script>
+<script src="assets/js/main.js?v=20261103c" defer></script>
 </body>
 </html>
