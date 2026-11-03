@@ -262,6 +262,4 @@ p { margin: 0; }
   .footer-inner { grid-template-columns: 1fr; }
   .hero-media::after { display: none; }
   .hero-media::before { background: linear-gradient(180deg, rgba(11,18,32,.92) 0%, rgba(11,18,32,.88) 50%, var(--ink) 100%); }
-  .logo-strip { gap: .6rem 1.6rem; }
-  .logo-strip li { white-space: normal; }
 }
