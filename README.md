@@ -47,7 +47,7 @@ python3 -m http.server 8080
 
 Search the code for `TODO` to find each one.
 
-- **Email:** `hello@gradermedia.com.au` is a placeholder in the mailto links and JSON-LD.
+- **Quote form:** Netlify Forms form `quote` in the contact section (fetch submit in `main.js`, no-JS fallback to `/thanks.html`). Form detection must be enabled for the site in Netlify and submission notifications pointed at `hello@gradermedia.com.au`.
 - **Domain:** canonical, Open Graph URLs, `robots.txt` and `sitemap.xml` assume `https://www.gradermedia.com.au`.
 - **Logos:** the client strip is text; swap in monochrome logo files (with permission).
 - **Hero video:** `assets/video/hero-loop.webm` / `.mp4` (13.4 s muted loop, 1600×900, no audio) with `assets/img/hero-poster.webp` / `.jpg` (the reel's first frame). The loop is seven hard-cut snippets from different jobs (playground aerial, industrial training, junior football, early learning, commercial property, client function, school sport) with a light shared grade and no on-screen text. Reduced-motion visitors see the poster only.
