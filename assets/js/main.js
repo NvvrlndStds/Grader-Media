@@ -33,10 +33,10 @@
   }
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
-  // Quote form: submit to Netlify Forms with fetch and show the result inline.
-  // Without JS the form posts normally and Netlify shows /thanks.html.
+  // Quote form: submit to Formspree (emails hello@austingrader.com) with fetch and show the result inline.
+  // Without JS the form posts normally and Formspree shows its own thank-you page.
   var form = document.getElementById('quote-form');
-  if (form && window.fetch && window.URLSearchParams && window.FormData) {
+  if (form && window.fetch && window.FormData) {
     var errorBox = document.getElementById('quote-form-error');
     var success = document.getElementById('quote-form-success');
     var submitBtn = form.querySelector('[type="submit"]');
@@ -45,8 +45,7 @@
       e.preventDefault();
       if (errorBox) errorBox.hidden = true;
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending\u2026'; }
-      var body = new URLSearchParams(new FormData(form)).toString();
-      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+      fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
         .then(function (res) {
           if (!res.ok) throw new Error('HTTP ' + res.status);
           form.reset();

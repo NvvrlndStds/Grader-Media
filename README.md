@@ -47,7 +47,7 @@ python3 -m http.server 8080
 
 Search the code for `TODO` to find each one.
 
-- **Quote form:** Netlify Forms form `quote` in the contact section (fetch submit in `main.js`, no-JS fallback to `/thanks.html`). Form detection must be enabled for the site in Netlify and submission notifications pointed at `hello@gradermedia.com.au`.
+- **Quote form:** posts to Formspree (form "Grader Media Quote", endpoint `https://formspree.io/f/xdeeynwr`, account hello@austingrader.com, free plan, 50 submissions/month). Submissions email hello@austingrader.com. `main.js` submits with fetch and shows the inline success message; without JS Formspree shows its own thank-you page. Honeypot field is `_gotcha`; `_subject` sets the email subject. Netlify Forms is no longer used.
 - **Domain:** canonical, Open Graph URLs, `robots.txt` and `sitemap.xml` assume `https://www.gradermedia.com.au`.
 - **Logos:** the client strip is text; swap in monochrome logo files (with permission).
 - **Hero video:** `assets/video/hero-loop.webm` / `.mp4` (13.4 s muted loop, 1600×900, no audio) with `assets/img/hero-poster.webp` / `.jpg` (the reel's first frame). The loop is seven hard-cut snippets from different jobs (playground aerial, industrial training, junior football, early learning, commercial property, client function, school sport) with a light shared grade and no on-screen text. Reduced-motion visitors see the poster only.
