@@ -11,10 +11,10 @@ const videos = [
   ['QF_BXrpLnRo', 'AWB Product Expo', 'Event highlight'],
   ['JmKjJGUviDU', 'KIDDO Conference 2026', 'Conference'],
   ['hdB-ziZscIU', 'Premier People Training Award', 'Training award'],
-  ['kWy4ITVA1yk', 'PlayPro × Little Creatures', 'Brand film'],
+  ['gEcIoS02pAQ', 'PlayPro × Little Creatures', 'Brand film'],
   ['WsoJNZzvSqo', 'Bloom Beechboro', 'Centre promo'],
-  ['Bd3XuVUc1xc', 'NJ Construction Hector Office', 'Project film'],
-  ['XSqZo0-31tA', 'PlayPro × Hartley Park', 'Brand film'],
+  ['kdBJt2nTGe8', 'NJ Construction Hector Office', 'Project film'],
+  ['4-d--kxHDNg', 'PlayPro × Hartley Park', 'Brand film'],
 ];
 
 function sliceBetween(source, startMarker, endMarker) {
@@ -40,6 +40,9 @@ test('approved landscape videos lead Recent projects, in order', () => {
     cursor = at;
   }
   assert.equal(reel.includes('I9wXO8VznQk'), false);
+  assert.equal(html.includes('kWy4ITVA1yk'), false);
+  assert.equal(html.includes('Bd3XuVUc1xc'), false);
+  assert.equal(html.includes('XSqZo0-31tA'), false);
 });
 
 test('the reel does not embed videos up front', () => {
